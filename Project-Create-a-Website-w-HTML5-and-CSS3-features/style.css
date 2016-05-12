@@ -1,25 +1,27 @@
 body {
-    background: #b3b3ff;
+    background: linear-gradient(#b3b3ff, #e5e5ff);
     font-family: "Serif";   
 }
 
 .page {
     width: 1000px;
     min-height: 1000px;
-    background: #f2f2f2;
+    background: linear-gradient(#f2f2f2, #e6e6e6);
     margin-left: auto;
     margin-right: auto;
     margin-top: -20px;
     border: 1px solid black; 
+    box-shadow: 0px 0px 200px #555;
 }
 
 .top-bar {
     width: 1000px;
-    background: #ffffe5;
+    background: radial-gradient(#ffffff, #ffffb3);
     height: 175px;
     border-bottom: solid black 1px;
     text-align: center;
     position: fixed;
+    z-index: 1;
 }
 
 .top-bar img {
@@ -42,14 +44,29 @@ body {
 }
 
 .menu a:hover {
+    animation: wobble 1s infinite;
     font-weight: bold;
+}
+
+@keyframes wobble {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-2deg);
+    }
+    75% {
+        transform: rotate(2deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 .section {
     padding: 0px 10px 0px 10px;
     text-align: center;
     margin-bottom: 50px;
-    min-height: 800px;
 }
 
 .anchor {
@@ -67,4 +84,92 @@ body {
     width: 200px;
     height: 200px;
     padding: 10px;
+}
+
+.slideshow img {
+    border: 3px solid black; 
+    border-radius: 20px;
+}
+
+.slideshow {
+    position: relative;
+    height: 550px;
+}
+
+.slideshow figure {
+    position: absolute;
+    width: 100%; 
+    margin: 0;
+    opacity: 0; 
+}
+
+#slide1 {
+    animation: xfade 10s 0s infinite;
+}
+
+#slide2 {
+    animation: xfade 10s 2.5s infinite;
+}
+
+#slide3 {
+    animation: xfade 10s 5s infinite;
+}
+
+#slide4 {
+    animation: xfade 10s 7.5s infinite;
+}
+
+@keyframes xfade {
+    0% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0;
+    }
+    
+}
+
+.logo-gallery {
+    height: 80px;
+}
+
+.logo-gallery img {
+    height: 60px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.logo-gallery img:hover {
+    animation: grow 0.5s forwards;
+}
+
+@keyframes grow {
+    100% {
+        height: 80px; 
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+.logo-preview img {
+    border: 3px solid black;
+    border-radius: 25px;
+    height: 500px;
+    margin: 0;
+}
+
+.logo-preview span {
+    display: none;
+    margin-top: calc(-335px - 500px - 11px);
+    padding-top: 335px;
+}
+
+.logo-preview span:target {
+    display: block;
 }

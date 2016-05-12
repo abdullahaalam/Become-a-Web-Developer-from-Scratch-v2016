@@ -1,0 +1,45 @@
+body {
+    background: #b3b3ff;
+    font-family: "Serif";   
+}
+
+.page {
+    width: 1000px;
+    min-height: 1000px;
+    background: #f2f2f2;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -20px;
+    border: 1px solid black; 
+}
+
+.top-bar {
+    width: 1000px;
+    background: #ffffe5;
+    height: 175px;
+    border-bottom: solid black 1px;
+    text-align: center;
+}
+
+.top-bar img {
+    margin-top: 30px;
+}
+
+.menu ul {
+    display: inline-block;
+    margin: auto;
+}
+
+.menu li {
+    display: inline;
+    margin: 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.menu a:hover {
+    font-weight: bold;
+}

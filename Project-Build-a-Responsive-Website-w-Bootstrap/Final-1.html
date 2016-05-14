@@ -19,13 +19,14 @@
         
         <style>
             .jumbotron {
+                margin-top: -20px;
             }
         </style>
    
     </head>
     <body>
        <!-- Navbar -->
-       <nav class="navbar navbar-inverse navbar-fixed-top" id="main-navbar" role="navigation">
+       <nav class="navbar navbar-inverse navbar-fixe-top" id="main-navbar" role="navigation">
            <div class="container">
                <div class="navbar-header">
                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
@@ -164,6 +165,188 @@
                    </div>
                </div>
            </section>
+       </div> <!-- end container -->
+       
+       <!-- Trial -->
+       <section>
+           <div class="well">
+               <div class="container text-center">
+                   <h3>Subscribe now for a 30-day trial!</h3>
+                   <p>Enter your name and email below</p>
+                   <form action="#" class="form-inline" role="form">
+                       <div class="form-group">
+                           <label for="subscribe-name" class="sr-only">Name</label>
+                           <input type="text" class="form-control" id="subscribe-name" placeholder="Name">
+                       </div> <!-- end form-group -->
+                       <div class="form-group">
+                           <label for="subscribe-email" class="sr-only">Email</label>
+                           <input type="text" class="form-control" id="subscribe-email" placeholder="Email">
+                       </div> <!-- end form-group -->
+                       <button type="submit" class="btn btn-default">Subscribe</button>
+                       <p><small><em>Your email will not be used for SPAM</em></small></p>
+                   </form>
+               </div> <!-- end container -->
+           </div> <!-- end well -->
+       </section>
+       
+       <div class="container">
+           <!-- Gallery -->
+           <section>
+               <div class="page-header" id="section-gallery">
+                   <h2>Gallery. <small>Take a look at our gallery product images.</small></h2>
+               </div>
+               <div class="carousel slide" id="gallery-carousel" data-ride="carousel">
+                   <ol class="carousel-indicators">
+                       <li data-target="#gallery-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#gallery-carousel" data-slide-to="1"></li>
+                        <li data-target="#gallery-carousel" data-slide-to="2"></li>
+                   </ol>
+                   
+                   <div class="carousel-inner">
+                       <div class="item active">
+                           <img src="images/slider-1.jpg" alt="Slider image" images="">
+                           <div class="carousel-caption">This is a caption.</div>
+                       </div>
+                       
+                        <div class="item">
+                           <img src="images/slider-2.jpg" alt="Slider image" images="">
+                           <div class="carousel-caption">This is a caption.</div>
+                       </div>
+                       
+                        <div class="item">
+                           <img src="images/slider-3.jpg" alt="Slider image" images="">
+                           <div class="carousel-caption">This is a caption.</div>
+                       </div>
+                   </div>
+                   
+                   <a href="#gallery-carousel" class="left carousel-control" data-slide="prev">
+                       <span class="glyphicon glyphicon-chevron-left"></span>
+                   </a>
+                   
+                    <a href="#gallery-carousel" class="right carousel-control" data-slide="next">
+                       <span class="glyphicon glyphicon-chevron-right"></span>
+                   </a>
+               </div>
+           </section>
+           
+           <section>
+               <div class="page-header" id="section-faq">
+                   <h2>FAQ <small>This will help get you started.</small></h2>
+               </div> <!-- end page-header -->
+           
+           <div class="panel-group" id="accordion-qa">
+               <div class="panel panel-default">
+                   <div class="panel-heading">
+                       <h4 class="panel-title"><a href="#qa-1" data-toggle="collapse" data-parent="#accordion-qa">Question 1</a></h4>
+                   </div>
+                   <div class="panel-collapse collapse in" id="qa-1">
+                       <div class="panel-body">
+                           This is where you'll get info about your question 1.
+                       </div> <!-- end panel-body -->
+                   </div> <!-- end collapse -->
+               </div> <!-- end panel -->
+               
+               
+                <div class="panel panel-default">
+                   <div class="panel-heading">
+                       <h4 class="panel-title"><a href="#qa-2" data-toggle="collapse" data-parent="#accordion-qa">Question 2</a></h4>
+                   </div>
+                   <div class="panel-collapse collapse" id="qa-2">
+                       <div class="panel-body">
+                           This is where you'll get info about your question 2.
+                       </div> <!-- end panel-body -->
+                   </div> <!-- end collapse -->
+               </div> <!-- end panel -->
+               
+               
+                <div class="panel panel-default">
+                   <div class="panel-heading">
+                       <h4 class="panel-title"><a href="#qa-3" data-toggle="collapse" data-parent="#accordion-qa">Question 3</a></h4>
+                   </div>
+                   <div class="panel-collapse collapse" id="qa-3">
+                       <div class="panel-body">
+                           This is where you'll get info about your question 3.
+                       </div> <!-- end panel-body -->
+                   </div> <!-- end collapse -->
+               </div> <!-- end panel -->
+               
+           </div> <!-- end panel-group -->
+           </section>
+           
+           <!-- Contact -->
+           <section>
+               <div class="page-header" id="section-contact">
+                   <h2>Contact Us. <small>Let's get in touch.</small></h2>
+               </div>
+               
+               <div class="row">
+                   <div class="col-lg-4">
+                       <p>To send us a message, use the contact form info below.</p>
+                       <address>
+                           <strong>Web Labs, Ltd</strong><br>
+                           Lisbon, Portugal 2780-105<br>
+                           <abbr title="Phone">P: </abbr> +35198213458
+                       </address>
+                   </div>
+                   <div class="col-lg-8">
+                       <form action="#" class="form-horizontal" role="form">
+                           <div class="form-group">
+                               <label for="contact-name" class="col-lg-2 control-label">Name</label>
+                             <div class="col-lg-10">
+                                 <input type="text" class="form-control" id="contact-name" placeholder="Name">
+                             </div>  
+                           </div>
+                           
+                            <div class="form-group">
+                               <label for="contact-email" class="col-lg-2 control-label">Email</label>
+                             <div class="col-lg-10">
+                                 <input type="text" class="form-control" id="contact-email" placeholder="Email">
+                             </div>  
+                           </div>
+                           
+                            <div class="form-group">
+                               <label for="contact-msg" class="col-lg-2 control-label">Message</label>
+                             <div class="col-lg-10">
+                                 <textarea name="contact-message" id="contact-message" class="form-control" cols="30" rows="10" placeholder="Message"></textarea>
+                             </div>  
+                           </div>
+                           <div class="form-group">
+                               <div class="col-lg-10 col-lg-offset-2">
+                                   <button type="submit" class="btn btn-primary">Send Message</button>
+                               </div>
+                           </div>
+                       </form>
+                   </div>
+               </div>
+           </section>
+           
+           <!-- Footer -->
+           <footer>
+               <hr>
+                <div class="container text-center">
+                   <h3>Subscribe now for a 30-day trial!</h3>
+                   <p>Enter your name and email below</p>
+                   <form action="#" class="form-inline" role="form">
+                       <div class="form-group">
+                           <label for="subscribe-name" class="sr-only">Name</label>
+                           <input type="text" class="form-control" id="subscribe-name" placeholder="Name">
+                       </div> <!-- end form-group -->
+                       <div class="form-group">
+                           <label for="subscribe-email" class="sr-only">Email</label>
+                           <input type="text" class="form-control" id="subscribe-email" placeholder="Email">
+                       </div> <!-- end form-group -->
+                       <button type="submit" class="btn btn-default">Subscribe</button>
+                       <p><small><em>Your email will not be used for SPAM</em></small></p>
+                   </form>
+                   <hr>
+                   <ul class="list-inline">
+                       <li><a href="#">Twitter</a></li>
+                       <li><a href="#">Facebook</a></li>
+                   </ul>
+                   <p>&copy; Copyright 2016.</p>
+               </div> <!-- end container -->
+           </footer>
+           
        </div> <!-- end container -->
        
         

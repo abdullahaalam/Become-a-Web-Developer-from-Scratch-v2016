@@ -13,7 +13,7 @@
 
         if(!empty($fname) && !empty($lname) && !empty($email) && !empty($gender) && !empty($age) && !empty($comments) && !empty($password)) {
             include('connection.php');
-            mysqli_query($dbc, "INSERT INTO users(first_name, last_name, email, gender, age, comments, password) VALUES('$fname', '$lname', '$email', '$gender', '$age', '$comments', '$password')");
+            mysqli_query($dbc, "INSERT INTO users(first_name, last_name, email, gender, age, comments, password, registration_date) VALUES('$fname', '$lname', '$email', '$gender', '$age', '$comments', '$password', NOW())");
             $registered = mysqli_affected_rows($dbc);
             echo $registered." row is affected, everything worked fine!";
         } else {

@@ -1,15 +1,42 @@
 <?php
+    // Include connecton script to database:
     include("connection.php");
-    $r = mysqli_query($dbc, "SELECT * FROM users");
-    echo "<p><a href='orderbyname.php'><b>Order by Name</b></a></p>";
-    echo "<table align='center' border='1' cellspacing='3' cellpadding='3' width='75%'>
-    <tr>
-        <td align='left'><b>Name</b></td>
-        <td align='left'><b>Email</b></td>
-    </tr>";
-    while($row = mysqli_fetch_array($r)) {
-        echo "<tr><td align='left'>".$row['last_name'].", ".$row['first_name']."</td><td align='left'>".$row['email']."</td></tr>";
-
+    // Define query:
+    $q = "SELECT last_name, first_name, email, DATE_FORMAT(registration_date, '%M %d, %Y %T') AS dr, id FROM users ORDER BY registration_date ASC";
+    // Query select all fields from table users:
+    $r = mysqli_query($dbc, $q);
+    // Count the number of returned rows:
+    $num = mysqli_num_rows($r);
+    // If any rows returned, display records:
+    if($num > 0) {
+        // Create order by name:
+        echo "<p><a href='orderbyname.php'><b>Order by Name</b></a></p>";
+        // Inform how many users are registered:
+        echo "<p>There are $num registered users.</p>";
+        // Create table:
+        echo "<table align='center' border='1' cellspacing='3' cellpadding='3' width='75%'>
+        <tr>
+            <td align='left'><b>Edit</b></td>
+            <td align='left'><b>Delete</b></td>
+            <td align='left'><b>Name</b></td>
+            <td align='left'><b>Email</b></td>
+            <td align='left'><b>Date Registered</b></td>
+        </tr>";
+        // Use while loop to create an associative array with values registration_date, last_name, first_name and email:
+        while($row = mysqli_fetch_array($r)) {
+            echo "<tr>
+                      <td align='left'><a href='edit_user.php?user_id=".$row['id']."'>Edit</a></td>
+                      <td align='left'><a href='delete_user.php?user_id=".$row['id']."'>Delete</a></td>
+                      <td align='left'>".$row['last_name'].", ".$row['first_name']."</td>
+                      <td align='left'>".$row['email']."</td>
+                      <td align='left'>".$row['dr']."</td>
+                  </tr>";
+        }
+        echo "</table>";
+    } else {
+        echo "There are currently no registered users!";
     }
+
+
     mysqli_close($dbc);
 ?>

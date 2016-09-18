@@ -1,4 +1,8 @@
 <?php
+    // Page title:
+    echo "<h3>Control Panel</h3>";
+    echo "<a href='output.php'>See Database Records</a> | <a href='password.php'>Change Your Passwrod</a>";
+    //echo "<a href='login.php'>Go back to control panel</a>";
     // Include connecton script to database:
     include("connection.php");
     // Define query:
@@ -9,8 +13,7 @@
     $num = mysqli_num_rows($r);
     // If any rows returned, display records:
     if($num > 0) {
-        // Create order by name:
-        echo "<p><a href='orderbyname.php'><b>Order by Name</b></a></p>";
+
         // Inform how many users are registered:
         echo "<p>There are $num registered users.</p>";
         // Create table:

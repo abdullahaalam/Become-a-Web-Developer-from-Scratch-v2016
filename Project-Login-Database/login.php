@@ -21,19 +21,19 @@
         // Create condition to check if email and password are equal to the returned row
         if($login_email == $dbemail) {
             if($login_password == $dbpass) {
-                echo "<p>Welcome ".$dbfirstname.", you are in!</p>";
-                include ("navbar.php");
+                echo "<p>Welcome ".$dbfirstname.", you'll be redirected to the control panel in 5 seconds...</p>";
+                header('Refresh: 5; URL=output.php');
             } else {
-                echo "your password is incorrect!";
+                echo "your password is incorrect! <a href='index.php'>Go back to login form</a>";
             }
         } else {
-            echo "your email is incorrect!";
+            echo "your email is incorrect! <a href='index.php'>Go back to login form</a>";
         }
     } else {
-        echo "Invalid credentials! If you are not registered, please register below...";
+        echo "Invalid credentials! If you are not registered, please register <a href='userform.php'>HERE</a>";
     }
 
     } else {
-        echo "Please Login...";
+        echo "<h2>Please login <a href='index.php'>HERE</a></h2>";
     }
 ?>

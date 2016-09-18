@@ -15,7 +15,7 @@
             include('connection.php');
             mysqli_query($dbc, "INSERT INTO users(first_name, last_name, email, gender, age, comments, password, registration_date) VALUES('$fname', '$lname', '$email', '$gender', '$age', '$comments', '$password', NOW())");
             $registered = mysqli_affected_rows($dbc);
-            echo $registered." row is affected, everything worked fine!";
+            echo "<h3>You have registered successfully! Please login <a href='index.php'>HERE</a></h3>";
         } else {
             echo "<p style='color:red;'>ERROR: you left some values in blank!</p>";
         }
@@ -44,6 +44,6 @@
             <p>Password:<input type="password" name="password" maxlength="50"></p>
             <p><input type="submit" name="submit" value="Submit" /></p>
         </form>
-        <a href="output.php">Check all current records from database</a>
+        <a href='index.php'>Go back to login form</a>
     </body>
 </html>

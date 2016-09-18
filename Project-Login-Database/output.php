@@ -26,7 +26,7 @@
         while($row = mysqli_fetch_array($r)) {
             echo "<tr>
                       <td align='left'><a href='edit_user.php?user_id=".$row['id']."'>Edit</a></td>
-                      <td align='left'><a href='delete_user.php?user_id=".$row['id']."'>Delete</a></td>
+                      <td align='left'><a href='delete.php?user_id=".$row['id']."&fname=".$row['first_name']."&lname=".$row['last_name']."'>Delete</a></td>
                       <td align='left'>".$row['last_name'].", ".$row['first_name']."</td>
                       <td align='left'>".$row['email']."</td>
                       <td align='left'>".$row['dr']."</td>
